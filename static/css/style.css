@@ -46,18 +46,19 @@
     position: absolute;
     width: 16%;
     left: 42%;
-    bottom: 80%;
+    bottom:7%;
     text-align: center;
 }
-.signup-form-columns form>label{
+/*.signup-form-columns form>label{
    margin-top:10px;
    margin-bottom:10px;
    font-family:Raleway-Regular;
-}
+}*/
 .form-control-border{
 	border-radius:0px;
 	height:50px;
 	box-shadow: inset 0px 0px 1px 1px #ccc;
+    width:90%;
 }
 @font-face {
     font-family: 'Raleway-Bold';
@@ -99,5 +100,33 @@
     src: url(../fonts/Raleway-ExtraLight.ttf);
     src: url(../fonts/Raleway-ExtraLight.ttf) format('truetype');
 }
-
-
+.custom-error {
+    color:#FF0000;
+}
+#css span.ok, #css span.ko {
+    display:none;
+    float: right;
+    font-size:30px;
+    margin-top: -40px;
+}
+#css .ng-pristine {
+    border:1px solid #ccc;
+}
+#css .ng-dirty.ng-valid {
+    border:1px solid Green;
+}
+#css .ng-dirty.ng-invalid {
+    border:1px solid Red;
+}
+#css .ng-dirty.ng-valid ~ span.ok {
+    color:green;
+    display:inline;
+}
+#css .ng-dirty.ng-invalid ~ span.ko {
+    color:red;
+    display:inline;
+}
+.signup-form .form-group{
+    margin-bottom:20px;
+    font-family:Raleway-Regular;
+}
