@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>First MyApp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.5.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="static/css/animate.css"/>
+</head>
+<body class="backcolor">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4 signup-form-columns fadeInDown" ng-controller="firstappCtrl">
+				<h2> SIGNUP</h2>
+				<form class="simple-form" novalidate  ng-submit="add(user)">
+					<label>Username : </label>
+					<input type="text" name="username" id="username" ng-model="user.username" class="form-control form-control-border" placeholder="Username." />
+					<label>Email : </label>
+					<input type="email" name="email" id="email" ng-model="user.email" class="form-control form-control-border" placeholder="Email Address." />
+					<label>Password :</label>
+					<input type="password" name="password" id="password" ng-model="user.password" class="form-control form-control-border" placeholder="Password." />
+					<div class="col-md-12 text-center">
+						<input type="submit" class="btn btn-danger btn-add btn-md" value="SIGNUP">
+					</div>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/angular.min.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="static/js/controller/firstappCtrl.js"></script>
+</body>
+</html>
