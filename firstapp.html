@@ -20,24 +20,24 @@
 						<h2> SIGNUP</h2>
 					</div>
 				</div>
-				<form class="signup-form" name="signupForm"novalidate  ng-submit="add(user)">
+				<form class="signup-form" name="signupForm" novalidate  ng-submit="add(user)">
 					<div class="form-group" id="css">
 						<label>Username : </label>
 						<input type="text" name="username" id="username" ng-model="user.username" class="form-control form-control-border" placeholder="Username" ng-required="true" ng-minlength="6" ng-maxlength="15"/><span class="material-icons ok">&#xE86C;</span><span class="material-icons ko">&#xE888;</span>
-						<div class="custom-error" ng-show="signupForm.username.$dirty &&signupForm.username.$invalid">Invalid: <span ng-show="signupForm.username.$error.required">Username is required..</span><span ng-show="signupForm.username.$error.minlength">Username min is 6 characters..</span><span ng-show="signupForm.username.$error.maxlength">Username max is 15 characters..</span>
+						<div class="custom-error" ng-show="signupForm.username.$dirty &&signupForm.username.$invalid && !signupForm.username.$pristine">Invalid: <span ng-show="signupForm.username.$error.required">Username is required..</span><span ng-show="signupForm.username.$error.minlength">Username min is 6 characters..</span><span ng-show="signupForm.username.$error.maxlength">Username max is 15 characters..</span>
                 		</div>
 					</div>
 					<div class="form-group" id="css">
 						<label>Email : </label>
 						<input type="email" name="email" id="email" ng-model="user.email" class="form-control form-control-border" placeholder="Email Address" ng-required="true" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/"/><span class="material-icons ok">&#xE86C;</span><span class="material-icons ko">&#xE888;</span>
-						<div class="custom-error" ng-show="signupForm.email.$dirty &&signupForm.email.$invalid">Invalid: <span ng-show="signupForm.email.$error.required">Email address is required..</span>
+						<div class="custom-error" ng-show="signupForm.email.$dirty &&signupForm.email.$invalid && !signupForm.email.$pristine">Invalid: <span ng-show="signupForm.email.$error.required">Email address is required..</span>
 						<span ng-show="signupForm.email.$error.pattern">Please enter correct email address..</span>
                 		</div>
 					</div>
 					<div class="form-group" id="css">
 						<label>Password :</label>
 						<input type="password" name="password" id="password" ng-model="user.password" class="form-control form-control-border" placeholder="Password" ng-required="true" ng-pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"/><span class="material-icons ok">&#xE86C;</span><span class="material-icons ko">&#xE888;</span>
-						<div class="custom-error" ng-show="signupForm.password.$dirty &&signupForm.password.$invalid">Invalid: <span ng-show="signupForm.password.$error.required">Password is required..</span>
+						<div class="custom-error" ng-show="signupForm.password.$dirty &&signupForm.password.$invalid && !signupForm.email.$pristine">Invalid: <span ng-show="signupForm.password.$error.required">Password is required..</span>
 						<span ng-show="signupForm.password.$error.pattern">Password Contains one uppercase & lower one digit & one special symbol & min 8 characters..</span>
                 		</div>
 					</div>
